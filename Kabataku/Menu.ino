@@ -42,79 +42,46 @@ void level_1()
 {  
   while(1)
   {  
-    long i = 0;   
-    long terpilih[3]={4, 4, 4};
-    sini:
-    long a = random(0,3);
-    tampilLcd(0,0," Nilai a: %1d ", a);
-    delay(4000);
-    for( int x=0; x<3; x++) 
-    {
-
-      lcd.clear();
-      tampilLcd(0,0," Terpilih: %1d ", terpilih[x]);
-      delay(4000);
-      if( a == terpilih[x] ) goto sini; 
-    }
-
-    switch(a)
+    lagu.play("1tambah1.wav");
+    tampilLcd(0,1,"      1+1 ?     ");
+    delay(10);
+    while(1)
       {
-
-        case 0:
-          lagu.play("1tambah1.wav");
-          tampilLcd(0,1,"      1+1 ?     ");
-          delay(10);
-          while(1)
-          {
-            //tampilLcd(0,0,"  ADC: %4d  ", analogRead(A0));
-            if( TOMBOL_2) break;
-            if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_4 || TOMBOL_5 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
-          }
-        lagu.play("benar.wav");
-      //if(jawaban[0]==2){lagu.play("benar.wav");}
-        delay(4000);
-        terpilih[i]=0;
-        i++;
-        lcd.clear();
-        break;
-
-        case 1:
-          lagu.play("2tambah2.wav");
-          tampilLcd(0,1,"      2+2 ?     ");
-          delay(10);
-          while(1)
-          {
-            //tampilLcd(0,0,"  ADC: %4d  ", analogRead(A0));
-            if( TOMBOL_4) break;
-            if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_5 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
-          }
-        lagu.play("benar.wav");
-      //if(jawaban[0]==2){lagu.play("benar.wav");}
-        delay(4000);
-        terpilih[i]=1;
-        i++;
-        lcd.clear();
-        break;
-
-        case 2:
-          lagu.play("1tambah4.wav");
-          tampilLcd(0,1,"      1+4 ?     ");
-          delay(10);
-          while(1)
-          {
-            //tampilLcd(0,0,"  ADC: %4d  ", analogRead(A0));
-            if( TOMBOL_5) break;
-            if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
-          }
-        lagu.play("benar.wav");
-      //if(jawaban[0]==2){lagu.play("benar.wav");}
-        delay(4000);
-        terpilih[i]=2;
-        i++;
-        lcd.clear();
-        break;
+        if( TOMBOL_2) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_4 || TOMBOL_5 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
       }
-      if(EXIT) break;
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+        
+    lagu.play("2tambah2.wav");
+    tampilLcd(0,1,"      2+2 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_4) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_5 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+      
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+     
+    lagu.play("1tambah4.wav");
+    tampilLcd(0,1,"      1+4 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_5) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+    
+    if(EXIT) break;
   }
 }
 
