@@ -27,6 +27,7 @@ void menuHitungan()
     if(tab1==3){delay(100);tampilLcd(0,0,"     LEVEL 3    ");}
     if(tab1==4){delay(100);tampilLcd(0,0,"     LEVEL 4    ");}
     if(ENTER && tab1==1){delay(100); lcd.clear();level_1();}
+    if(ENTER && tab1==2){delay(100); lcd.clear();level_2();}
   /*  if(ENTER&&tab==1){level_2();}
     if(ENTER&&tab==2){level_3();}
     if(ENTER&&tab==3){level_4();}*/
@@ -42,6 +43,7 @@ void level_1()
 {  
   while(1)
   {  
+    // Pertanyaan Pertama
     lagu.play("1tambah1.wav");
     tampilLcd(0,1,"      1+1 ?     ");
     delay(10);
@@ -54,7 +56,8 @@ void level_1()
       lagu.play("benar.wav");
       delay(4000);
       lcd.clear();
-        
+    
+    // Pertanyaan Kedua    
     lagu.play("2tambah2.wav");
     tampilLcd(0,1,"      2+2 ?     ");
     delay(10);
@@ -68,6 +71,7 @@ void level_1()
       delay(4000);
       lcd.clear();
      
+    // Pertanyaan Ketiga
     lagu.play("1tambah4.wav");
     tampilLcd(0,1,"      1+4 ?     ");
     delay(10);
@@ -80,10 +84,179 @@ void level_1()
       lagu.play("benar.wav");
       delay(4000);
       lcd.clear();
-    
+
+    // Pertanyaan Keempat
+    lagu.play("3tambah3.wav");
+    tampilLcd(0,1,"      3+3 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_6) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_5 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    // Pertanyaan Kelima  
+    lagu.play("1tambah5.wav");
+    tampilLcd(0,1,"      1+5 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_6) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_5 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    // Pertanyaan Ke enam
+    lagu.play("2tambah1.wav");
+    tampilLcd(0,1,"      2+1 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_3) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_6 || TOMBOL_2 || TOMBOL_4 || TOMBOL_5 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    // Pertanyaan Ke tujuh  
+    lagu.play("2tambah3.wav");
+    tampilLcd(0,1,"      2+3 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_5) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_6 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    // Pertanyaan ke delapan
+    lagu.play("2tambah5.wav");
+    tampilLcd(0,1,"      2+5 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_7) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_5 || TOMBOL_6 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    // Pertanyaan ke Sembilan  
+    lagu.play("3tambah1.wav");
+    tampilLcd(0,1,"      3+1 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_4) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_6 || TOMBOL_5 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    lagu.play("3tambah3.wav");
+    tampilLcd(0,1,"      3+3 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_6) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_5 || TOMBOL_7 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
+    // Pertanyaan ke sepuluh  
+    lagu.play("3tambah4.wav");
+    tampilLcd(0,1,"      3+4 ?     ");
+    delay(10);
+    while(1)
+      {
+        if( TOMBOL_7) break;
+        if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_5 || TOMBOL_6 || TOMBOL_8 ||TOMBOL_9 ) { delay(50);lagu.play("CobaLagi.wav"); }
+      }
+
+      lagu.play("benar.wav");
+      delay(4000);
+      lcd.clear();
+
     if(EXIT) break;
   }
 }
+
+
+void level_2()
+{
+  while(1)
+  {
+    lagu.play("3tambah4.wav");
+    tampilLcd(0,1,"      1+1 ?     ");
+    delay(10);
+    while(1)
+    {
+      if ( TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_7 || TOMBOL_6 || TOMBOL_8 ||TOMBOL_9 ) //jawaban salah
+      {
+        delay(500);
+        jawaban[0]=0; tampilLcd(0,0, "%1d", jawaban[0]);
+        while(1)
+        {
+          if(TOMBOL_0 || TOMBOL_1 || TOMBOL_2 || TOMBOL_3 || TOMBOL_4 || TOMBOL_5 || TOMBOL_6 || TOMBOL_7 ||TOMBOL_8 || TOMBOL_9) 
+          {
+            delay(500);
+            jawaban[1]=0; tampilLcd(1,0, "%1d", jawaban[1]); break;
+          }
+        }
+      } 
+      if(TOMBOL_5)
+      {
+        delay(500);
+        jawaban[0]=5; tampilLcd(0,0, "%1d",jawaban[0]);
+        while(1)
+        {
+          if(TOMBOL_0 || TOMBOL_1 || TOMBOL_3 || TOMBOL_2 || TOMBOL_4 || TOMBOL_7 || TOMBOL_6 || TOMBOL_9 || TOMBOL_5) 
+          {
+            delay(500);
+            jawaban[1]=0; tampilLcd(1,0, "%1d ", jawaban[1]); break;
+          }
+          if(TOMBOL_8)
+          {
+            delay(500);
+            jawaban[1]=8; tampilLcd(1,0, "%1d", jawaban[1]); break;
+          }
+        }
+      }
+
+      if(TOMBOL_ENTER && jawaban[1]==8 && jawaban[0]==5){ 
+        delay(500); lcd.clear(); lcd.clear(); tampilLcd(0,0, "wow benar"); break;
+        }  //jika benar
+      if(TOMBOL_ENTER && jawaban[0]!=5 && jawaban[1]!=8){ 
+        delay(500); lagu.play("CobaLagi.wav");
+        }   //jika salah 
+    }
+    lagu.play("benar.wav");
+    delay(4000); lcd.clear();
+    if(EXIT) break;
+  }
+  
+  
+}
+
 
 void lagu_daerah()
 {
@@ -116,10 +289,10 @@ void cek_adc()
   while(1)
   {
     int val_0 = analogRead(A0);
-    //int val_1 = analogRead(A1);
+    int val_1 = analogRead(A1);
 
-    delay(100);tampilLcd(0,0," A0: %3d ", val_0);
-    //tampilLcd(0,1," A1: %3d ", val_1);
+    delay(100); tampilLcd(0,0," A0: %3d ", val_0);
+    delay(100); tampilLcd(0,1," A1: %3d ", val_1);
 
     if( EXIT ) break;
   }

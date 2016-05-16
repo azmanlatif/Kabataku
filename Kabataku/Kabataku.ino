@@ -28,6 +28,10 @@
 #define TOMBOL_9                  ( analogRead(A0)<10 )  // 0
 #define TOMBOL                    ( analogRead(A0)>630)
 
+#define TOMBOL_ENTER              ( analogRead(A1)<950 && analogRead(A1)>930 )
+#define TOMBOL_CLEAR              ( analogRead(A1)<890 && analogRead(A1)>850 )
+#define TOMBOL_REPEAT             ( analogRead(A1)<30 && analogRead(A1)>2 )
+
 //============= Object =====================================================================
 
 LiquidCrystal lcd (31, 33, 41, 43, 45, 47);
@@ -63,7 +67,7 @@ void setup()
 //============= Main Program ===================================================================
 
 void loop()
-{
+{   
   menuUtama();
 }
 
