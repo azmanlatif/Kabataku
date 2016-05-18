@@ -26,7 +26,6 @@
 #define TOMBOL_7                  ( analogRead(A0)>578 && analogRead(A0)<598 )    // 588 -- 587
 #define TOMBOL_8                  ( analogRead(A0)>603 && analogRead(A0)<617 )  // 613
 #define TOMBOL_9                  ( analogRead(A0)<10 )  // 0
-#define TOMBOL                    ( analogRead(A0)>630)
 
 #define TOMBOL_ENTER              ( analogRead(A1)<950 && analogRead(A1)>930 )
 #define TOMBOL_CLEAR              ( analogRead(A1)<890 && analogRead(A1)>850 )
